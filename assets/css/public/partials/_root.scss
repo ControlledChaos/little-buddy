@@ -1,0 +1,20 @@
+///
+/// CSS variable definitions
+///
+
+@import '../../shared/modules/_typography';
+@import '../../shared/modules/_colors';
+
+:root {
+
+	// Site header.
+	--bbtc--branding--site-title--font-family: var( --bbtc--headings--font-family );
+	--bbtc--branding--site-title--font-size: 1.25rem;
+	--bbtc--branding--site-title--font-weight: 500;
+
+	// Buddypanel navigation.
+	--bbtc--buddypanel--nav-entry--font-family: #{$family_display};
+	--bbtc--buddypanel--nav-entry--font-size: 1rem;
+	--bbtc--buddypanel--nav-link--text-color: var( --bbtc--general--text-color );
+	--bbtc--buddypanel--icon--text-color: var( --bbtc--buddypanel--nav-link--text-color );
+}

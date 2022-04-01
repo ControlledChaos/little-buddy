@@ -1,0 +1,17 @@
+/**
+ * Theme Name: Little Buddy
+ * Template: buddyboss-theme
+ * Description: Child of the BuddyBoss theme.
+ * Version: 1.0.0
+ * Tested up to: 5.9
+ * Requires PHP: 5.6
+ * Text Domain: bbtc
+ */
+
+/**
+ * This theme enqueues a minified stylesheet compiled from SASS (.scss) files.
+ *
+ * This stylesheet only contains the above theme header that is necessary for theme activation.
+ *
+ * DO NOT delete this stylesheet!
+ */

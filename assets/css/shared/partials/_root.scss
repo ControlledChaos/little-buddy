@@ -1,0 +1,19 @@
+///
+/// CSS variable definitions
+///
+
+@import '../modules/_typography';
+@import '../modules/_colors';
+
+:root {
+
+	// General typography.
+	--bbtc--general--font-family: #{$family_general};
+	--bbtc--headings--font-family: #{$family_display};
+	--bbtc--headings--primary--font-size: 2.25rem;
+	--bbtc--headings--primary--font-weight: 400;
+
+	// General colors.
+	--bbtc--general--text-color: #333333;
+	--bbtc--general--link-color: #5887ff;
+}

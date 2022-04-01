@@ -1,0 +1,21 @@
+///
+/// General styles
+///
+
+.buddyboss-child {
+
+	font-family: var( --bbtc--general--font-family, sans-serif );
+	color: var( --bbtc--general--text-color );
+
+	h1,
+	h2,
+	h3 {
+		font-family: var( --bbtc--headings--font-family, serif );
+	}
+
+	h1,
+	h2 {
+		font-size: var( --bbtc--headings--primary--font-size );
+		font-weight: var( --bbtc--headings--primary--font-weight, normal );
+	}
+}

@@ -1,0 +1,34 @@
+///
+/// Buddypanel navigation
+///
+
+.buddyboss-child {
+
+	.buddypanel {
+
+		.buddypanel-menu {
+
+			&.side-panel-menu{
+
+				li {
+					font-family: var( --bbtc--buddypanel--nav-entry--font-family );
+					font-size: var( --bbtc--buddypanel--nav-entry--font-size );
+				}
+
+				a {
+					font-size: inherit;
+				}
+
+				.bs-submenu-toggle {
+					font-size: var( --bbtc--buddypanel--nav-entry--submenu-toggle--font-size, 2em );
+				}
+			}
+		}
+
+		.bb-toggle-panel,
+		.buddypanel-menu {
+
+			i {}
+		}
+	}
+}

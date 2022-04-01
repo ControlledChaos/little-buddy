@@ -1,0 +1,23 @@
+///
+/// Site header
+///
+
+.buddyboss-child {
+
+	.site-header {
+
+		.site-title {
+			font-family: var( --bbtc--branding--site-title--font-family );
+			font-size: var( --bbtc--branding--site-title--font-size );
+			font-weight: var( --bbtc--branding--site-title--font-weight );
+		}
+
+		.sub-menu {
+
+			// @todo Use header nav style option.
+			a {
+				color: #122b46;
+			}
+		}
+	}
+}

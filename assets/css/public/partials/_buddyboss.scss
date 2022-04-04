@@ -1,0 +1,49 @@
+///
+/// Buddyboss pages
+///
+
+.buddyboss-child {
+
+	.bs-forums-banner p {
+		opacity: unset;
+		font-size: 1rem;
+		font-weight: normal;
+		letter-spacing: normal;
+		line-height: unset;
+	}
+
+	.medium-editor-placeholder::after {
+		color: var( --bbtc--general--text-color );
+		opacity: 0.8;
+	}
+
+	.bs-forums-banner.has-banner-img .bs-search-form::before,
+	.bs-forums-banner.has-banner-img input[type="text"] {
+		color: #122b46;
+	}
+
+	.bs-search-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: #122b46 !important;
+		opacity: 0.8 !important;
+	}
+
+	.bs-search-form ::-moz-placeholder {
+		color: #122b46 !important;
+		opacity: 0.8 !important;
+	}
+
+	.bs-search-form :-ms-input-placeholder { /* IE 10+ */
+		color: #122b46 !important;
+		opacity: 0.8 !important;
+	}
+
+	.bs-search-form :-moz-placeholder { /* Firefox 18- */
+		color: #122b46 !important;
+		opacity: 0.8 !important;
+	}
+
+	.bs-search-form ::placeholder {
+		color: #122b46 !important;
+		opacity: 0.8 !important;
+	}
+}

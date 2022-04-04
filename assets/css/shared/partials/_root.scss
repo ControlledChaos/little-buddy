@@ -8,8 +8,9 @@
 :root {
 
 	// General typography.
+	--bbtc--display--font-family: #{$family_display};
 	--bbtc--general--font-family: #{$family_general};
-	--bbtc--headings--font-family: #{$family_display};
+	--bbtc--headings--font-family: var( --bbtc--display--font-family );
 	--bbtc--headings--primary--font-size: 2.25rem;
 	--bbtc--headings--primary--font-weight: 400;
 

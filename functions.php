@@ -12,6 +12,122 @@
 namespace Little_Buddy;
 
 /**
+ * Constant: Theme file path
+ *
+ * @since 1.0.0
+ * @var   string File path with trailing slash.
+ */
+$theme_path = get_stylesheet_directory();
+define( 'LB_PATH', $theme_path . '/' );
+
+/**
+ * Constant: Theme file URL
+ *
+ * @since 1.0.0
+ * @var   string
+ */
+$theme_url = get_stylesheet_directory_uri();
+define( 'LB_URL', $theme_url );
+
+/**
+ * Get pluggable path
+ *
+ * Used to check for the `is_user_logged_in` function.
+ */
+if ( ( function_exists( 'is_multisite' ) && ! is_multisite() ) && file_exists( ABSPATH . 'wp-includes/pluggable.php' ) ) {
+	include_once( ABSPATH . 'wp-includes/pluggable.php' );
+}
+
+/**
+ * Get plugins path
+ *
+ * Used to check for active plugins with the `is_plugin_active` function.
+ */
+if ( ! function_exists( 'is_plugin_active' ) ) {
+	if ( file_exists( ABSPATH . 'wp-admin/includes/plugin.php' ) ) {
+		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	}
+}
+
+// Stop here if the plugin functions file can not be accessed.
+if ( ! function_exists( 'is_plugin_active' ) ) {
+	return;
+}
+
+/**
+ * ACF is active
+ *
+ * Checks for the Advanced Custom Fields plugin
+ *
+ * @since  1.0.0
+ * @access public
+ * @return boolean Returns true if the plugin is installed & active.
+ */
+function active_acf() {
+
+	if ( is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * ACF PRO is active
+ *
+ * Checks for the Advanced Custom Fields PRO plugin
+ *
+ * @since  1.0.0
+ * @access public
+ * @return boolean Returns true if the plugin is installed & active.
+ */
+function active_acf_pro() {
+
+	if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * ACFE is active
+ *
+ * Checks for the Advanced Custom Fields: Extended plugin
+ *
+ * @since  1.0.0
+ * @access public
+ * @return boolean Returns true if the plugin is installed & active.
+ */
+function active_acfe() {
+
+	if ( is_plugin_active( 'acf-extended/acf-extended.php' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
+ * ACFE PRO is active
+ *
+ * Checks for the Advanced Custom Fields: Extended PRO plugin
+ *
+ * @since  1.0.0
+ * @access public
+ * @return boolean Returns true if the plugin is installed & active.
+ */
+function active_acfe_pro() {
+
+	if ( is_plugin_active( 'acf-extended-pro/acf-extended.php' ) ) {
+		return true;
+	}
+	return false;
+}
+
+// Load required files.
+foreach ( glob( LB_PATH . 'includes/admin/*.php' ) as $filename ) {
+	require $filename;
+}
+
+/**
  * Remove activation modal
  *
  * The parent theme displays a video in a
@@ -125,13 +241,53 @@ function frontend_styles() {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\frontend_styles' );
 
 /**
+ * Admin styles
+ *
+ * Google fonts needed for custom formats in the editor.
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function admin_styles() {
+
+	// Get Google fonts.
+	wp_enqueue_style( 'google-fonts', google_fonts(), [], null );
+}
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\admin_styles' );
+
+/**
+ * Rich text editor styles
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function editor_styles() {
+
+	// If in one of the debug modes do not minify.
+	if (
+		( defined( 'WP_DEBUG' ) && WP_DEBUG ) ||
+		( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG )
+	) {
+		$suffix = '';
+	} else {
+		$suffix = '.min';
+	}
+
+	add_editor_style( "assets/css/admin/editor$suffix.css", [], '', 'screen' );
+}
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\editor_styles' );
+
+/**
  * Remove admin pages
  *
  * @since  1.0.0
  * @return void
  */
 function remove_admin_pages() {
-
 	remove_action( 'admin_menu', [ 'BuddyBoss_Updater_Admin', 'admin_menu' ], 10 );
 }
 add_action( 'admin_menu', __NAMESPACE__ . '\\remove_admin_pages', 999 );
+
+if ( is_admin() ) {
+	Content_Editors\setup();
+}

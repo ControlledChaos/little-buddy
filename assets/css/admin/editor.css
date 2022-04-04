@@ -8,16 +8,6 @@
   --bbtc--general--link-color: #5887ff;
 }
 
-:root {
-  --bbtc--branding--site-title--font-family: var( --bbtc--headings--font-family );
-  --bbtc--branding--site-title--font-size: 1.25rem;
-  --bbtc--branding--site-title--font-weight: 500;
-  --bbtc--buddypanel--nav-entry--font-family: Roboto Slab, Georgia, Times, Garamond, NonBreakingSpaceOverride, Hoefler Text, Lucida Bright, Lucidabright, Lucida Serif, Lucida, Liberation Serif, serif;
-  --bbtc--buddypanel--nav-entry--font-size: 1rem;
-  --bbtc--buddypanel--nav-link--text-color: var( --bbtc--general--text-color );
-  --bbtc--buddypanel--icon--text-color: var( --bbtc--buddypanel--nav-link--text-color );
-}
-
 .font-size.font-size-smaller {
   font-size: 0.75em;
 }
@@ -152,71 +142,4 @@ body.buddyboss-child .h6 {
   /* Firefox 18- */
   color: var(--bbtc--general--text-color);
   opacity: 0.8;
-}
-
-.buddyboss-child .site-header .site-title {
-  font-family: var(--bbtc--branding--site-title--font-family);
-  font-size: var(--bbtc--branding--site-title--font-size);
-  font-weight: var(--bbtc--branding--site-title--font-weight);
-}
-
-.buddyboss-child .site-header .sub-menu a {
-  color: #122b46;
-}
-
-.buddyboss-child .primary-menu > li > a {
-  font-weight: 400;
-}
-
-.buddyboss-child .buddypanel .buddypanel-menu.side-panel-menu li {
-  font-family: var(--bbtc--buddypanel--nav-entry--font-family);
-  font-size: var(--bbtc--buddypanel--nav-entry--font-size);
-}
-
-.buddyboss-child .buddypanel .buddypanel-menu.side-panel-menu a {
-  font-size: inherit;
-}
-
-.buddyboss-child .buddypanel .buddypanel-menu.side-panel-menu .bs-submenu-toggle {
-  font-size: var(--bbtc--buddypanel--nav-entry--submenu-toggle--font-size, 2em);
-}
-
-.buddyboss-child .bs-forums-banner p {
-  opacity: unset;
-  font-size: 1rem;
-  font-weight: normal;
-  letter-spacing: normal;
-  line-height: unset;
-}
-
-.buddyboss-child .medium-editor-placeholder::after {
-  color: var(--bbtc--general--text-color);
-  opacity: 0.8;
-}
-
-.buddyboss-child .bs-forums-banner.has-banner-img .bs-search-form::before,
-.buddyboss-child .bs-forums-banner.has-banner-img input[type="text"] {
-  color: #122b46;
-}
-
-.buddyboss-child .bs-search-form ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #122b46 !important;
-  opacity: 0.8 !important;
-}
-
-.buddyboss-child .bs-search-form :-ms-input-placeholder {
-  /* IE 10+ */
-  color: #122b46 !important;
-  opacity: 0.8 !important;
-}
-
-.buddyboss-child .bs-search-form ::-ms-input-placeholder {
-  color: #122b46 !important;
-  opacity: 0.8 !important;
-}
-
-.buddyboss-child .bs-search-form ::placeholder {
-  color: #122b46 !important;
-  opacity: 0.8 !important;
 }

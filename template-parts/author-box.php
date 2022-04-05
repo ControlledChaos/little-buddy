@@ -1,4 +1,13 @@
 <?php
+/**
+ * Post author box
+ *
+ * @package    Little Buddy
+ * @subpackage Templates
+ * @category   Template Parts
+ * @since      1.0.0
+ */
+
 $author_box = buddyboss_theme_get_option( 'blog_author_box' );
 
 if ( is_single() && !is_related_posts() && is_singular( 'post' ) ) : ?>

@@ -181,6 +181,11 @@ body.buddyboss-child .h6 {
   font-size: var(--bbtc--buddypanel--nav-entry--submenu-toggle--font-size, 2em);
 }
 
+body.bb-custom-typo .entry-title,
+body.buddyboss-child .entry-title {
+  line-height: 1.1;
+}
+
 body.bb-custom-typo .bb-course-footer,
 body.bb-custom-typo .ld-table-list-header .ld-text,
 body.bb-custom-typo .gamipress-achievement-points,
@@ -214,6 +219,34 @@ body.buddyboss-child .ld-profile-stats .ld-profile-stat strong {
 body.bb-custom-typo h4.comments-title,
 body.buddyboss-child h4.comments-title {
   font-family: var(--bbtc--headings--font-family, serif);
+}
+
+.wp-block-columns {
+  margin: 0;
+  gap: 1rem;
+}
+
+.wp-block-columns + .wp-block-columns {
+  margin-top: 1rem;
+}
+
+.wp-block-columns .wp-block-column {
+  margin: 0 !important;
+}
+
+.wp-block-columns .wp-block-column :last-child {
+  margin: 0 0 1rem;
+}
+
+.wp-block-columns .wp-block-column h3 {
+  font-weight: 500;
+}
+
+@media (min-width: 600px) and (max-width: 781px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:only-child) {
+    -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important;
+  }
 }
 
 .buddyboss-child .bs-forums-banner p {

@@ -5,6 +5,10 @@
 body.bb-custom-typo,
 body.buddyboss-child {
 
+	.entry-title {
+		line-height: 1.1;
+	}
+
 	.bb-course-footer,
 	.ld-table-list-header .ld-text,
 	.gamipress-achievement-points,
@@ -33,5 +37,34 @@ body.buddyboss-child {
 
 	h4.comments-title {
 		font-family: var( --bbtc--headings--font-family, serif );
+	}
+}
+
+// Block content.
+.wp-block-columns {
+	margin: 0;
+	gap: 1rem;
+
+	& + .wp-block-columns {
+		margin-top: 1rem;
+	}
+
+	.wp-block-column {
+		margin: 0 !important;
+
+		:last-child {
+			margin: 0 0 1rem;
+		}
+
+		h3 {
+			font-weight: 500;
+		}
+	}
+}
+
+@media ( min-width: 600px ) and ( max-width: 781px ) {
+
+	.wp-block-columns:not( .is-not-stacked-on-mobile ) > .wp-block-column:not( :only-child ) {
+		flex-basis: 100% !important;
 	}
 }

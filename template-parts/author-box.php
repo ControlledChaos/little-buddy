@@ -5,7 +5,7 @@ if ( is_single() && !is_related_posts() && is_singular( 'post' ) ) : ?>
 	<div class="post-author-info">
 		<div class="show-support">
 			<?php if ( function_exists( 'bb_bookmarks' ) ) { ?>
-				<h6><?php _e( 'Show your support', 'buddyboss-theme' ); ?></h6>
+				<h6><?php _e( 'Show your support', 'bbtc' ); ?></h6>
 				<p><?php printf( '<span class="authors-avatar vcard table-cell">Liking shows how much you appreciated %1$s’s story.</span>', get_the_author() ); ?></p>
 			<?php } ?>
 
@@ -20,8 +20,8 @@ if ( is_single() && !is_related_posts() && is_singular( 'post' ) ) : ?>
         						'action_type'	 => 'like',
         						'wrapper_class'	 => 'bb-like-wrap',
         						'icon_class'	 => 'bb-icon-like',
-        						'title_add'		 => __( 'Like this entry', 'buddyboss-theme' ),
-        						'title_remove'	 => __( 'Remove like', 'buddyboss-theme' ),
+        						'title_add'		 => __( 'Like this entry', 'bbtc' ),
+        						'title_remove'	 => __( 'Remove like', 'bbtc' ),
         					) );
         				}
         				?>
@@ -30,7 +30,7 @@ if ( is_single() && !is_related_posts() && is_singular( 'post' ) ) : ?>
 
                 <?php
                 if ( comments_open() || get_comments_number() ) { ?>
-                    <a data-balloon-pos="up" data-balloon="<?php _e( 'Comments', 'buddyboss-theme' ); ?>" href="#comments" class="push-right"><i class="bb-icon-comment"></i></a>
+                    <a data-balloon-pos="up" data-balloon="<?php _e( 'Comments', 'bbtc' ); ?>" href="#comments" class="push-right"><i class="bb-icon-comment"></i></a>
                 <?php } ?>
 
                <?php if ( is_singular( 'dummy_type' ) ) : ?>
@@ -52,8 +52,8 @@ if ( is_single() && !is_related_posts() && is_singular( 'post' ) ) : ?>
 						'wrapper_class'	 => 'bookmark-link-container',
 						'icon_class'	 => 'bb-bookmark bb-icon-bookmark-small',
 						'text_template'	 => '',
-						'title_add'		 => __( 'Bookmark this story to read later', 'buddyboss-theme' ),
-						'title_remove'	 => __( 'Remove bookmark', 'buddyboss-theme' ),
+						'title_add'		 => __( 'Bookmark this story to read later', 'bbtc' ),
+						'title_remove'	 => __( 'Remove bookmark', 'bbtc' ),
 					) );
 				}
 				?>

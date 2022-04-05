@@ -181,6 +181,41 @@ body.buddyboss-child .h6 {
   font-size: var(--bbtc--buddypanel--nav-entry--submenu-toggle--font-size, 2em);
 }
 
+body.bb-custom-typo .bb-course-footer,
+body.bb-custom-typo .ld-table-list-header .ld-text,
+body.bb-custom-typo .gamipress-achievement-points,
+body.bb-custom-typo .vjs-modal-dialog-content,
+body.buddyboss-child .bb-course-footer,
+body.buddyboss-child .ld-table-list-header .ld-text,
+body.buddyboss-child .gamipress-achievement-points,
+body.buddyboss-child .vjs-modal-dialog-content {
+  font-family: var(--bbtc--general--font-family, sans-serif);
+}
+
+body.bb-custom-typo #content .mepr-price-menu .mepr-price-box-title,
+body.buddyboss-child #content .mepr-price-menu .mepr-price-box-title {
+  font-family: var(--bbtc--general--font-family, sans-serif);
+}
+
+body.bb-custom-typo .mepr-price-box-price span,
+body.bb-custom-typo .learndash-wrapper #ld-profile .ld-profile-heading,
+body.buddyboss-child .mepr-price-box-price span,
+body.buddyboss-child .learndash-wrapper #ld-profile .ld-profile-heading {
+  font-family: var(--bbtc--general--font-family, sans-serif);
+  font-weight: 500;
+}
+
+body.bb-custom-typo .ld-profile-stats .ld-profile-stat strong,
+body.buddyboss-child .ld-profile-stats .ld-profile-stat strong {
+  font-family: var(--bbtc--general--font-family, sans-serif);
+  font-weight: 600;
+}
+
+body.bb-custom-typo h4.comments-title,
+body.buddyboss-child h4.comments-title {
+  font-family: var(--bbtc--headings--font-family, serif);
+}
+
 .buddyboss-child .bs-forums-banner p {
   opacity: unset;
   font-size: 1rem;

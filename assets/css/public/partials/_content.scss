@@ -27,3 +27,11 @@ body.buddyboss-child {
 		font-weight: 600;
 	}
 }
+
+body.bb-custom-typo,
+body.buddyboss-child {
+
+	h4.comments-title {
+		font-family: var( --bbtc--headings--font-family, serif );
+	}
+}

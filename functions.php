@@ -60,7 +60,6 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
  * Checks for the Advanced Custom Fields plugin
  *
  * @since  1.0.0
- * @access public
  * @return boolean Returns true if the plugin is installed & active.
  */
 function active_acf() {
@@ -77,7 +76,6 @@ function active_acf() {
  * Checks for the Advanced Custom Fields PRO plugin
  *
  * @since  1.0.0
- * @access public
  * @return boolean Returns true if the plugin is installed & active.
  */
 function active_acf_pro() {
@@ -94,7 +92,6 @@ function active_acf_pro() {
  * Checks for the Advanced Custom Fields: Extended plugin
  *
  * @since  1.0.0
- * @access public
  * @return boolean Returns true if the plugin is installed & active.
  */
 function active_acfe() {
@@ -111,7 +108,6 @@ function active_acfe() {
  * Checks for the Advanced Custom Fields: Extended PRO plugin
  *
  * @since  1.0.0
- * @access public
  * @return boolean Returns true if the plugin is installed & active.
  */
 function active_acfe_pro() {
@@ -121,6 +117,26 @@ function active_acfe_pro() {
 	}
 	return false;
 }
+
+/**
+ * ACF template suffix
+ *
+ * Returns a suffix used to get template parts
+ * containing ACF functions if ACF is active.
+ *
+ * @since  1.0.0
+ * @return boolean Returns the suffix if the plugin
+ *                 is installed & active.
+ */
+function acf_suffix() {
+
+	$suffix = '';
+	if ( active_acf() || active_acf_pro() ) {
+		$suffix = '-acf';
+	}
+	return $suffix;
+}
+
 
 // Load required files.
 foreach ( glob( LB_PATH . 'includes/admin/*.php' ) as $filename ) {
@@ -202,11 +218,11 @@ function google_fonts() {
 
 	return esc_url_raw(
 		add_query_arg(
-			array(
+			[
 				'family'  => rawurlencode( implode( '|', $fonts ) ),
 				'subset'  => rawurlencode( 'latin,latin-ext' ),
 				'display' => 'swap',
-			),
+			],
 			'https://fonts.googleapis.com/css'
 		)
 	);
@@ -291,3 +307,25 @@ add_action( 'admin_menu', __NAMESPACE__ . '\\remove_admin_pages', 999 );
 if ( is_admin() ) {
 	Content_Editors\setup();
 }
+
+/**
+ * Front page redirect
+ *
+ * Redirects to the user activity feed
+ * if the user is logged in.
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function front_page_redirect() {
+
+	if (
+		is_front_page() &&
+		is_user_logged_in() &&
+		function_exists( 'bp_loggedin_user_domain' )
+	) {
+		wp_redirect( bp_loggedin_user_domain() . 'activity/' );
+		die();
+	}
+}
+add_action( 'template_redirect', __NAMESPACE__ . '\\front_page_redirect' );

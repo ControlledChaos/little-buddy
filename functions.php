@@ -55,6 +55,21 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 }
 
 /**
+ * If BuddyBoss screen
+ *
+ * @since  1.0.0
+ * @return boolean Returns true if on a BuddyBoss screen.
+ */
+function is_buddyboss() {
+
+	$is_buddyboss = false;
+	if ( is_buddypress() || is_bbpress() ) {
+		$is_buddyboss = true;
+	}
+	return $is_buddyboss;
+}
+
+/**
  * ACF is active
  *
  * Checks for the Advanced Custom Fields plugin

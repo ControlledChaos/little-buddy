@@ -283,7 +283,7 @@ function frontend_styles() {
 		wp_enqueue_style( 'buddyboss-child-rtl', get_theme_file_uri( "/assets/css/style-rtl$suffix.css" ), [ 'buddyboss-child' ], null, 'all' );
 	}
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\frontend_styles' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\frontend_styles', 20 );
 
 /**
  * Admin styles
@@ -406,9 +406,10 @@ function boss_generate_option_css() {
 
 	<?php ob_start(); ?>
 
-	.entry-content a.pmpro_btn,
-	.pmpro_btn, .pmpro_btn:link,
-	a.pmpro_btn {
+	.buddyboss-child .pmpro_btn,
+	.buddyboss-child a.pmpro_btn,
+	.buddyboss-child .entry-content a.pmpro_btn,
+	.buddyboss-child .pmpro_btn:link {
 		background-color: <?php echo $primary_color; ?>;
 	}
 	<?php

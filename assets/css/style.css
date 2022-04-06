@@ -288,3 +288,284 @@ body.buddyboss-child h4.comments-title {
   color: #122b46 !important;
   opacity: 0.8 !important;
 }
+
+.buddyboss-child table.pmpro_checkout,
+.buddyboss-child table#pmpro_invoices_table,
+.buddyboss-child #pmpro_account-invoices table,
+.buddyboss-child #pmpro_account-membership table,
+.buddyboss-child #pmpro_cancel table {
+  border-collapse: separate;
+  background: inherit;
+  font-size: 1.125rem;
+}
+
+.buddyboss-child table.pmpro_checkout th:first-child,
+.buddyboss-child table.pmpro_checkout td:first-child,
+.buddyboss-child table#pmpro_invoices_table th:first-child,
+.buddyboss-child table#pmpro_invoices_table td:first-child,
+.buddyboss-child #pmpro_account-invoices table th:first-child,
+.buddyboss-child #pmpro_account-invoices table td:first-child,
+.buddyboss-child #pmpro_account-membership table th:first-child,
+.buddyboss-child #pmpro_account-membership table td:first-child,
+.buddyboss-child #pmpro_cancel table th:first-child,
+.buddyboss-child #pmpro_cancel table td:first-child {
+  padding-left: 1em;
+}
+
+.buddyboss-child table.pmpro_checkout th:last-child,
+.buddyboss-child table.pmpro_checkout td:last-child,
+.buddyboss-child table#pmpro_invoices_table th:last-child,
+.buddyboss-child table#pmpro_invoices_table td:last-child,
+.buddyboss-child #pmpro_account-invoices table th:last-child,
+.buddyboss-child #pmpro_account-invoices table td:last-child,
+.buddyboss-child #pmpro_account-membership table th:last-child,
+.buddyboss-child #pmpro_account-membership table td:last-child,
+.buddyboss-child #pmpro_cancel table th:last-child,
+.buddyboss-child #pmpro_cancel table td:last-child {
+  padding-right: 1em;
+}
+
+.buddyboss-child table.pmpro_checkout thead th:first-child,
+.buddyboss-child table#pmpro_invoices_table thead th:first-child,
+.buddyboss-child #pmpro_account-invoices table thead th:first-child,
+.buddyboss-child #pmpro_account-membership table thead th:first-child,
+.buddyboss-child #pmpro_cancel table thead th:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout thead th:last-child,
+.buddyboss-child table#pmpro_invoices_table thead th:last-child,
+.buddyboss-child #pmpro_account-invoices table thead th:last-child,
+.buddyboss-child #pmpro_account-membership table thead th:last-child,
+.buddyboss-child #pmpro_cancel table thead th:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout thead tr:first-child th,
+.buddyboss-child table#pmpro_invoices_table thead tr:first-child th,
+.buddyboss-child #pmpro_account-invoices table thead tr:first-child th,
+.buddyboss-child #pmpro_account-membership table thead tr:first-child th,
+.buddyboss-child #pmpro_cancel table thead tr:first-child th {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout thead tr:first-child th:first-child,
+.buddyboss-child table#pmpro_invoices_table thead tr:first-child th:first-child,
+.buddyboss-child #pmpro_account-invoices table thead tr:first-child th:first-child,
+.buddyboss-child #pmpro_account-membership table thead tr:first-child th:first-child,
+.buddyboss-child #pmpro_cancel table thead tr:first-child th:first-child {
+  border-radius: 4px 0 0 0;
+}
+
+.buddyboss-child table.pmpro_checkout thead tr:first-child th:last-child,
+.buddyboss-child table#pmpro_invoices_table thead tr:first-child th:last-child,
+.buddyboss-child #pmpro_account-invoices table thead tr:first-child th:last-child,
+.buddyboss-child #pmpro_account-membership table thead tr:first-child th:last-child,
+.buddyboss-child #pmpro_cancel table thead tr:first-child th:last-child {
+  border-radius: 0 4px 0 0;
+}
+
+.buddyboss-child table.pmpro_checkout thead th,
+.buddyboss-child table#pmpro_invoices_table thead th,
+.buddyboss-child #pmpro_account-invoices table thead th,
+.buddyboss-child #pmpro_account-membership table thead th,
+.buddyboss-child #pmpro_cancel table thead th {
+  text-transform: none;
+  font-family: var(--bbtc--headings--font-family, serif);
+  font-size: 1.4375rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.buddyboss-child table.pmpro_checkout tbody td:first-child,
+.buddyboss-child table#pmpro_invoices_table tbody td:first-child,
+.buddyboss-child #pmpro_account-invoices table tbody td:first-child,
+.buddyboss-child #pmpro_account-membership table tbody td:first-child,
+.buddyboss-child #pmpro_cancel table tbody td:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout tbody td:last-child,
+.buddyboss-child table#pmpro_invoices_table tbody td:last-child,
+.buddyboss-child #pmpro_account-invoices table tbody td:last-child,
+.buddyboss-child #pmpro_account-membership table tbody td:last-child,
+.buddyboss-child #pmpro_cancel table tbody td:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout tbody tr:last-child td,
+.buddyboss-child table#pmpro_invoices_table tbody tr:last-child td,
+.buddyboss-child #pmpro_account-invoices table tbody tr:last-child td,
+.buddyboss-child #pmpro_account-membership table tbody tr:last-child td,
+.buddyboss-child #pmpro_cancel table tbody tr:last-child td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.buddyboss-child table.pmpro_checkout tbody tr:last-child td:first-child,
+.buddyboss-child table#pmpro_invoices_table tbody tr:last-child td:first-child,
+.buddyboss-child #pmpro_account-invoices table tbody tr:last-child td:first-child,
+.buddyboss-child #pmpro_account-membership table tbody tr:last-child td:first-child,
+.buddyboss-child #pmpro_cancel table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 4px;
+}
+
+.buddyboss-child table.pmpro_checkout tbody tr:last-child td:last-child,
+.buddyboss-child table#pmpro_invoices_table tbody tr:last-child td:last-child,
+.buddyboss-child #pmpro_account-invoices table tbody tr:last-child td:last-child,
+.buddyboss-child #pmpro_account-membership table tbody tr:last-child td:last-child,
+.buddyboss-child #pmpro_cancel table tbody tr:last-child td:last-child {
+  border-radius: 0 0 4px 0;
+}
+
+.buddyboss-child .pmpro_btn:hover,
+.buddyboss-child a.pmpro_btn:hover,
+.buddyboss-child .entry-content a.pmpro_btn:hover,
+.buddyboss-child .pmpro_btn:link:hover {
+  -webkit-box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+.buddyboss-child .pmpro_btn.pmpro_btn-cancel,
+.buddyboss-child a.pmpro_btn.pmpro_btn-cancel,
+.buddyboss-child .entry-content a.pmpro_btn.pmpro_btn-cancel,
+.buddyboss-child .pmpro_btn:link.pmpro_btn-cancel {
+  color: #939597;
+  text-decoration: none;
+}
+
+.buddyboss-child .pmpro_btn.pmpro_btn-cancel:hover,
+.buddyboss-child a.pmpro_btn.pmpro_btn-cancel:hover,
+.buddyboss-child .entry-content a.pmpro_btn.pmpro_btn-cancel:hover,
+.buddyboss-child .pmpro_btn:link.pmpro_btn-cancel:hover {
+  color: #007cff;
+  text-decoration: none;
+}
+
+.buddyboss-child #pmpro_levels_table .pmpro_btn {
+  padding: 5px 40px;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.buddyboss-child #pmpro_levels_table tbody td:last-child {
+  text-align: right;
+}
+
+.buddyboss-child form.pmpro_form .input,
+.buddyboss-child form.pmpro_form textarea,
+.buddyboss-child form.pmpro_form select {
+  width: 100%;
+}
+
+.buddyboss-child form.pmpro_form .pmpro_payment-expiration select {
+  max-width: 150px;
+}
+
+.buddyboss-child form.pmpro_form .pmpro_payment-expiration select#ExpirationMonth {
+  margin-right: 5px;
+}
+
+.buddyboss-child form.pmpro_form .pmpro_payment-expiration select#ExpirationYear {
+  margin-left: 7px;
+}
+
+.buddyboss-child form.pmpro_form .pmpro_checkout-field-bcity_state_zip input[type=text] {
+  max-width: 25%;
+  margin-right: 5px;
+}
+
+.buddyboss-child form.pmpro_form hr {
+  height: 1px;
+  background-color: transparent;
+  border-top: 1px solid #e7e9ec;
+  margin: 1.5em 0;
+}
+
+.buddyboss-child form.pmpro_form > div[align=center] {
+  text-align: left;
+}
+
+.buddyboss-child form.pmpro_form input[type=button]#other_discount_code_button {
+  text-decoration: none;
+}
+
+.buddyboss-child input[type=submit].pmpro_btn {
+  border: 0;
+}
+
+.buddyboss-child .pmpro_checkout h3 span.pmpro_checkout-h3-msg {
+  font-style: normal;
+}
+
+.buddyboss-child #pmpro_account .pmpro_box {
+  border-top: 0;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.buddyboss-child #pmpro_account .pmpro_box h3 {
+  margin-bottom: inherit;
+}
+
+.buddyboss-child #pmpro_account-membership > .pmpro_actionlinks {
+  margin-top: -15px;
+  font-size: 14px;
+}
+
+.buddyboss-child body[class^=pmpro] hr {
+  height: 1px;
+  background-color: transparent;
+  border-top: 1px solid #e7e9ec;
+  margin: 1.5em 0;
+}
+
+.buddyboss-child .pmpro_a-print {
+  background: transparent;
+  color: #939597;
+}
+
+.buddyboss-child .pmpro_a-print:before {
+  content: "\e924";
+  font-family: "bb-icons";
+  font-size: 16px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 1px;
+  margin-right: 4px;
+}
+
+.buddyboss-child .pmpro_a-print:hover {
+  color: #007cff;
+}
+
+.buddyboss-child .bb-pmpro_account-profile {
+  background-color: #fff;
+  border: 1px solid #e7e9ec;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.buddyboss-child .bb-pmpro_account-profile > p {
+  color: #122b46;
+  text-transform: uppercase;
+}
+
+.buddyboss-child .bb-pmpro_account-profile > ul {
+  list-style: none;
+}
+
+.buddyboss-child #pmpro_account .pmpro_box .bb-pmpro_account-profile p {
+  margin: 0 0 10px;
+}
+
+.buddyboss-child #pmpro_account .pmpro_box .bb-pmpro_account-profile ul {
+  margin-left: 0;
+}
+
+.buddyboss-child .pmpro_checkout h3 span.pmpro_checkout-h3-msg {
+  font-family: var(--bbtc--general--font-family, sans-serif);
+  font-size: 0.875rem;
+}

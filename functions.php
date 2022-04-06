@@ -357,7 +357,8 @@ function front_page_redirect() {
 		die();
 	}
 }
-add_action( 'template_redirect', __NAMESPACE__ . '\\front_page_redirect' );
+// @todo Activate when done editing front page of live site.
+// add_action( 'template_redirect', __NAMESPACE__ . '\\front_page_redirect' );
 
 /**
  * Custom CSS from parent theme options panel

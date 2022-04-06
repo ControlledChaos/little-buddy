@@ -7,12 +7,10 @@
  * @category   Template Parts
  * @since      1.0.0
  */
-?>
 
-<?php
 global $post;
-?>
 
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( ! is_single() || is_related_posts() ) { ?>

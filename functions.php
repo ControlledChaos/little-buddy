@@ -70,6 +70,20 @@ function is_buddyboss() {
 }
 
 /**
+ * Paid Membership Pro is active
+ *
+ * @since  1.0.0
+ * @return boolean Returns true if the plugin is installed & active.
+ */
+function active_pmpro() {
+
+	if ( is_plugin_active( 'paid-memberships-pro/paid-memberships-pro.php' ) ) {
+		return true;
+	}
+	return false;
+}
+
+/**
  * ACF is active
  *
  * Checks for the Advanced Custom Fields plugin
@@ -344,3 +358,86 @@ function front_page_redirect() {
 	}
 }
 add_action( 'template_redirect', __NAMESPACE__ . '\\front_page_redirect' );
+
+/**
+ * Custom CSS from parent theme options panel
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function boss_generate_option_css() {
+
+	$custom_css = [];
+	if ( is_customize_preview() ) {
+		$custom_css = [];
+	} else {
+		$custom_css = get_transient( 'little_buddy_compressed_custom_css' );
+	}
+
+	if ( ! empty( $custom_css ) && isset( $custom_css['css'] ) ) {
+
+		echo "<style id=\"little_buddy-style\">{$custom_css["css"]}</style>";
+
+		return false;
+	}
+
+	$primary_color   = buddyboss_theme_get_option( 'accent_color' );
+	$secondary_color = buddyboss_theme_get_option( 'accent_hover' );
+	$highlight_color = buddyboss_theme_get_option( 'highlight_color' );
+
+	$header_height = buddyboss_theme_get_option( 'header_height' );
+	$header_shadow = buddyboss_theme_get_option( 'header_shadow' );
+	$header_sticky = buddyboss_theme_get_option( 'header_sticky' );
+
+	$header_lesson_topic = get_body_class();
+
+	$tooltip_background = buddyboss_theme_get_option( 'tooltip_background' );
+	$tooltip_color      = buddyboss_theme_get_option( 'tooltip_color' );
+
+	$button_radius = buddyboss_theme_get_option( 'button_default_radius' );
+
+	$danger_color         = buddyboss_theme_get_option( 'error_notice_bg_color' );
+	$success_color        = buddyboss_theme_get_option( 'success_notice_bg_color' );
+	$warning_color        = buddyboss_theme_get_option( 'warning_notice_bg_color' );
+	$default_notice_color = buddyboss_theme_get_option( 'default_notice_bg_color' );
+
+	?>
+	<style id="little_buddy-style">
+
+	<?php ob_start(); ?>
+
+	.entry-content a.pmpro_btn,
+	.pmpro_btn, .pmpro_btn:link,
+	a.pmpro_btn {
+		background-color: <?php echo $primary_color; ?>;
+	}
+	<?php
+
+		$css = ob_get_contents();
+		// Remove comments
+		$css = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css );
+		// Remove space after colons
+		$css = str_replace( ': ', ':', $css );
+		// Remove whitespace
+		$css = str_replace( [ "\r\n", "\r", "\n", "\t", '  ', '    ', '    ' ], '', $css );
+
+        ob_end_clean();
+
+        echo $css;
+
+		if ( ! is_array( $custom_css ) ) {
+			$custom_css = [];
+		}
+		$custom_css['css'] = $css;
+
+        ?>
+
+		</style>
+		<?php
+
+		// Save processed CSS.
+		set_transient( 'little_buddy_compressed_custom_css', $custom_css );
+}
+
+// Priority 1 later than parent theme.
+add_action( 'wp_head', __NAMESPACE__ . '\\boss_generate_option_css', 100 );

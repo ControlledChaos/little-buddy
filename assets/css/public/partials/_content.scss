@@ -58,6 +58,18 @@ body.buddyboss-child {
 
 		h3 {
 			font-weight: 500;
+
+			&.has-text-color {
+				a {
+					color: inherit;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: inherit;
+					}
+				}
+			}
 		}
 	}
 }

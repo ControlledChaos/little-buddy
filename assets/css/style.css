@@ -242,6 +242,14 @@ body.buddyboss-child h4.comments-title {
   font-weight: 500;
 }
 
+.wp-block-columns .wp-block-column h3.has-text-color a {
+  color: inherit;
+}
+
+.wp-block-columns .wp-block-column h3.has-text-color a:hover, .wp-block-columns .wp-block-column h3.has-text-color a:focus, .wp-block-columns .wp-block-column h3.has-text-color a:active {
+  color: inherit;
+}
+
 @media (min-width: 600px) and (max-width: 781px) {
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:only-child) {
     -ms-flex-preferred-size: 100% !important;

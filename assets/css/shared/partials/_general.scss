@@ -40,6 +40,18 @@ body.buddyboss-child {
 	font-family: var( --bbtc--display--font-family, serif );
 }
 
+.two-column-list {
+	column-count: 2;
+
+	@media screen and ( min-width: 640px ) {
+		column-count: 1;
+	}
+}
+
+.no-style-list {
+	list-style: none;
+}
+
 // Placeholders.
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	color: var( --bbtc--general--text-color );

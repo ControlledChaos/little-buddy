@@ -24,4 +24,10 @@
 	.primary-menu > li > a {
 		font-weight: 400;
 	}
+
+	#site-logo .site-title .bb-logo img,
+	#site-logo .site-title img.bb-logo,
+	.buddypanel .site-title img {
+		margin-right: 0.5em;
+	}
 }

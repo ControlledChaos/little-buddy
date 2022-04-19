@@ -52,6 +52,11 @@ body.buddyboss-child {
 	.wp-block-column {
 		margin: 0 !important;
 
+		* {
+			padding-left: unset;
+			padding-right: unset;
+		}
+
 		:last-child {
 			margin: 0 0 1rem;
 		}

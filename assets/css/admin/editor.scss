@@ -5,3 +5,37 @@
 @import '../shared/partials/_root';
 @import '../shared/partials/_typography';
 @import '../shared/partials/_general';
+
+// Block content.
+.wp-block-columns {
+	margin: 0;
+	gap: 1rem;
+
+	& + .wp-block-columns {
+		margin-top: 1rem;
+	}
+
+	.wp-block-column {
+		margin: 0 !important;
+
+		:last-child {
+			margin: 0 0 1rem;
+		}
+
+		h3 {
+			font-weight: 500;
+
+			&.has-text-color {
+				a {
+					color: inherit;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}

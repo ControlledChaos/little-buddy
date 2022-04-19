@@ -43,7 +43,7 @@ body.buddyboss-child {
 .two-column-list {
 	column-count: 2;
 
-	@media screen and ( min-width: 640px ) {
+	@media screen and ( max-width: 640px ) {
 		column-count: 1;
 	}
 }

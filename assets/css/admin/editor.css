@@ -125,7 +125,7 @@ body.buddyboss-child .h6 {
           column-count: 2;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
   .two-column-list {
     -webkit-column-count: 1;
             column-count: 1;

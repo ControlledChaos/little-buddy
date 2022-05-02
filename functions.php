@@ -442,3 +442,14 @@ function boss_generate_option_css() {
 
 // Priority 1 later than parent theme.
 add_action( 'wp_head', __NAMESPACE__ . '\\boss_generate_option_css', 100 );
+
+/**
+ * Unwrap Contact Form 7 elements
+ *
+ * @since  1.0.0
+ * @return void
+ */
+function unwrap_cf7() {
+	wp_add_inline_script( 'jquery', 'jQuery(document).ready(function($){$(".wpcf7-form input,.wpcf7-form textarea,.wpcf7-form select").unwrap();});' );
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\unwrap_cf7', 20 );
